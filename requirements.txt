@@ -1,0 +1,13 @@
+langchain
+langchain-openai
+langchain-community
+langchain-chroma
+chromadb
+streamlit
+python-dotenv
+requests
+tiktoken
+openai
+reportlab
+ragas
+pypdf

@@ -1,0 +1,20 @@
+2026-03-18 01:50:40 | INFO | SESSION_START | New user session started
+2026-03-18 01:51:20 | INFO | QUERY | message='Prašau suplanuoti visą mokyklinę ekskursiją į Vilniaus senamiestis 1 klasė, 25 mokiniams ir 2 mokyto' | sources=['Hill Of Crosses', 'Kernave', 'Kaunas Old Town', 'Vilnius Old Town'] | tokens=0 | response_length=1629
+2026-03-18 01:53:51 | INFO | QUERY | message='Papasakokite apie Trakų pilį' | sources=['Trakai Castle'] | tokens=0 | response_length=1359
+2026-03-18 02:03:26 | INFO | SESSION_START | New user session started
+2026-03-18 02:03:55 | INFO | QUERY | message='Compare Trakai and Kernavė for history class' | sources=['Kernave', 'Trakai Castle'] | tokens=0 | response_length=2500
+2026-03-18 02:05:01 | INFO | SESSION_START | New user session started
+2026-03-18 02:05:24 | INFO | QUERY | message='Please plan a full school excursion to 🏛️ Vilnius Old Town for Grade 1, 25 pupils and 2 teachers, tr' | sources=['Kaunas Old Town', 'Kernave', 'Vilnius Old Town', 'Trakai Castle'] | tokens=0 | response_length=2580
+2026-03-18 02:07:11 | INFO | SESSION_START | New user session started
+2026-03-18 02:07:29 | INFO | QUERY | message='Kokius saugos patarimus turėčiau žinoti mokyklinėms ekskursijoms?' | sources=['Vilnius Old Town', 'Trakai Castle', 'Museum Of Occupations', 'Kernave'] | tokens=0 | response_length=1131
+2026-03-18 02:07:35 | INFO | QUERY | message='Kokius saugos patarimus turėčiau žinoti mokyklinėms ekskursijoms?' | sources=['Vilnius Old Town', 'Trakai Castle', 'Museum Of Occupations', 'Kernave'] | tokens=0 | response_length=1434
+2026-03-18 02:14:07 | INFO | SESSION_START | New user session started
+2026-03-18 02:14:32 | INFO | QUERY | message='🗓️ Planuoti išvyką į Trakus 6 klasei
+' | sources=['Trakai Castle', 'Hill Of Crosses'] | tokens=0 | response_length=226
+2026-03-18 02:18:03 | INFO | SESSION_START | New user session started
+2026-03-18 02:20:28 | INFO | QUERY | message='Tell me about Ventės ragas' | sources=['Ventės Ragas – Pusiasalis Prie Kurš', 'Kernave'] | tokens=0 | response_length=386
+2026-03-18 02:22:44 | INFO | SESSION_START | New user session started
+2026-03-18 02:24:41 | INFO | SESSION_START | New user session started
+2026-03-18 02:25:13 | INFO | QUERY | message='Papasakok apie Ventės ragas' | sources=['Ventės Ragas – Pusiasalis Prie Kurš'] | tokens=0 | response_length=913
+2026-03-18 02:28:25 | INFO | SESSION_START | New user session started
+2026-03-18 02:30:02 | INFO | QUERY | message='Tell me about Ventės ragas' | sources=['Ventės Ragas – Pusiasalis Prie Kurš'] | tokens=0 | response_length=699

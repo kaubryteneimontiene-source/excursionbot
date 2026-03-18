@@ -1,0 +1,67 @@
+2026-03-17 23:00:34 | INFO | SESSION_START | New user session started
+2026-03-17 23:02:54 | INFO | QUERY | message='Hello' | sources=[] | tokens=0 | response_length=67
+2026-03-17 23:11:12 | INFO | SESSION_START | New user session started
+2026-03-17 23:11:17 | INFO | SESSION_START | New user session started
+2026-03-17 23:14:17 | INFO | SESSION_START | New user session started
+2026-03-17 23:17:38 | INFO | SESSION_START | New user session started
+2026-03-17 23:18:10 | INFO | QUERY | message='Budget for 25 pupils and 2 teachers to Trakai Castle from Vilnius' | sources=['Trakai Castle'] | tokens=0 | response_length=983
+2026-03-17 23:20:30 | INFO | SESSION_START | New user session started
+2026-03-17 23:20:41 | INFO | QUERY | message='Budget for 25 pupils and 2 teachers to Trakai Castle from Vilnius' | sources=['Trakai Castle'] | tokens=0 | response_length=878
+2026-03-17 23:21:49 | INFO | SESSION_START | New user session started
+2026-03-17 23:22:05 | INFO | QUERY | message='Budget for 25 pupils and 2 teachers to Trakai Castle from Vilnius' | sources=['Trakai Castle'] | tokens=0 | response_length=890
+2026-03-17 23:24:14 | INFO | SESSION_START | New user session started
+2026-03-17 23:24:32 | INFO | QUERY | message='Budget for 25 pupils and 2 teachers to Trakai Castle from Vilnius' | sources=['Trakai Castle'] | tokens=0 | response_length=933
+2026-03-17 23:29:32 | INFO | SESSION_START | New user session started
+2026-03-17 23:30:09 | INFO | QUERY | message='Budget for 25 pupils and 2 teachers to Trakai Castle from Vilnius' | sources=['Trakai Castle'] | tokens=0 | response_length=1223
+2026-03-17 23:36:23 | INFO | SESSION_START | New user session started
+2026-03-17 23:36:42 | INFO | QUERY | message='Budget for 25 pupils and 2 teachers to Trakai Castle from Vilnius
+
+' | sources=['Trakai Castle'] | tokens=0 | response_length=1108
+2026-03-17 23:39:20 | INFO | SESSION_START | New user session started
+2026-03-17 23:39:34 | INFO | QUERY | message='Budget for 25 pupils and 2 teachers to Trakai Castle from Vilnius
+Budget for 25 pupils and 2 teacher' | sources=['Trakai Castle', 'Kernave', 'Kaunas Old Town'] | tokens=0 | response_length=1319
+2026-03-17 23:42:14 | INFO | SESSION_START | New user session started
+2026-03-17 23:51:21 | INFO | SESSION_START | New user session started
+2026-03-17 23:51:42 | INFO | QUERY | message='Budget for 25 pupils and 2 teachers to Trakai Castle from Vilnius' | sources=['Trakai Castle', 'Kernave', 'Kaunas Old Town'] | tokens=0 | response_length=1201
+2026-03-17 23:58:57 | INFO | SESSION_START | New user session started
+2026-03-18 00:02:43 | INFO | SESSION_START | New user session started
+2026-03-18 00:03:03 | INFO | QUERY | message='ecursion to trakai for 25 kids with teachet 10 years' | sources=['Trakai Castle', 'Hill Of Crosses', 'Museum Of Occupations'] | tokens=0 | response_length=438
+2026-03-18 00:05:08 | INFO | SESSION_START | New user session started
+2026-03-18 00:09:30 | INFO | SESSION_START | New user session started
+2026-03-18 00:13:31 | INFO | SESSION_START | New user session started
+2026-03-18 00:14:45 | INFO | SESSION_START | New user session started
+2026-03-18 00:19:17 | INFO | SESSION_START | New user session started
+2026-03-18 00:28:22 | INFO | SESSION_START | New user session started
+2026-03-18 00:28:48 | INFO | SESSION_START | New user session started
+2026-03-18 00:29:24 | INFO | QUERY | message='Sveiki' | sources=[] | tokens=0 | response_length=63
+2026-03-18 00:29:52 | INFO | QUERY | message='Noriu planuoti ekskursiją į Trakų pilį
+' | sources=['Trakai Castle', 'Curonian Spit', 'Kernave', 'Kaunas Old Town'] | tokens=0 | response_length=229
+2026-03-18 00:35:19 | INFO | SESSION_START | New user session started
+2026-03-18 00:35:43 | INFO | QUERY | message=' "Plan a trip to Trakai for 10th grade"' | sources=['Trakai Castle', 'Kaunas Old Town'] | tokens=0 | response_length=379
+2026-03-18 00:36:11 | INFO | QUERY | message='10 pupils, 1 teacher, from Vilnius' | sources=['Kaunas Old Town', 'Kernave', 'Museum Of Occupations', 'Hill Of Crosses'] | tokens=0 | response_length=2367
+2026-03-18 00:56:13 | INFO | SESSION_START | New user session started
+2026-03-18 00:57:55 | INFO | SESSION_START | New user session started
+2026-03-18 01:04:26 | INFO | SESSION_START | New user session started
+2026-03-18 01:10:59 | INFO | SESSION_START | New user session started
+2026-03-18 01:16:23 | INFO | SESSION_START | New user session started
+2026-03-18 01:16:57 | INFO | QUERY | message='Budget for 25 pupils and 2 teachers to Trakai Castle from Vilnius' | sources=['Trakai Castle', 'Kernave', 'Kaunas Old Town'] | tokens=0 | response_length=1033
+2026-03-18 01:18:18 | INFO | SESSION_START | New user session started
+2026-03-18 01:19:00 | INFO | QUERY | message='Budget for 25 pupils and 6 teachers to Trakai Castle from Vilnius' | sources=['Trakai Castle', 'Kernave', 'Kaunas Old Town'] | tokens=0 | response_length=1088
+2026-03-18 01:19:18 | INFO | QUERY | message='Budget for 10 pupils and 2 teachers to Trakai Castle from Vilnius' | sources=['Trakai Castle', 'Kaunas Old Town', 'Kernave'] | tokens=0 | response_length=1081
+2026-03-18 01:20:22 | INFO | SESSION_START | New user session started
+2026-03-18 01:28:04 | INFO | SESSION_START | New user session started
+2026-03-18 01:28:26 | INFO | QUERY | message='I want to plan a school excursion. Can you help me?' | sources=['Kernave', 'Vilnius Old Town', 'Kaunas Old Town', 'Trakai Castle'] | tokens=0 | response_length=315
+2026-03-18 01:28:46 | INFO | QUERY | message='Calculate the budget for my school group excursion.' | sources=['Kernave', 'Kaunas Old Town', 'Vilnius Old Town', 'Trakai Castle'] | tokens=0 | response_length=372
+2026-03-18 01:29:01 | INFO | QUERY | message='What safety tips should I know for school excursions?' | sources=['Trakai Castle', 'Kernave', 'Vilnius Old Town', 'Curonian Spit'] | tokens=0 | response_length=1806
+2026-03-18 01:29:08 | INFO | QUERY | message='What safety tips should I know for school excursions?' | sources=['Trakai Castle', 'Kernave', 'Vilnius Old Town', 'Curonian Spit'] | tokens=0 | response_length=1588
+2026-03-18 01:29:30 | INFO | QUERY | message='Tell me about the best Lithuanian historical sites for school visits.' | sources=['Kernave', 'Museum Of Occupations', 'Trakai Castle', 'Kaunas Old Town'] | tokens=0 | response_length=3433
+2026-03-18 01:30:00 | INFO | QUERY | message='Pasiūlykite amžiui tinkamas veiklas mano mokyklos grupei.' | sources=['Museum Of Occupations', 'Kernave', 'Kaunas Old Town', 'Vilnius Old Town'] | tokens=0 | response_length=1099
+2026-03-18 01:31:27 | INFO | SESSION_START | New user session started
+2026-03-18 01:31:34 | INFO | QUERY | message='Apskaičiuokite biudžetą mano mokyklos grupės ekskursijai.' | sources=['Kernave', 'Trakai Castle', 'Vilnius Old Town', 'Hill Of Crosses'] | tokens=0 | response_length=270
+2026-03-18 01:32:09 | INFO | QUERY | message='1. 1 klasė
+2. 10 mokinių, du mokytojai
+3. Kauno' | sources=['Kaunas Old Town', 'Trakai Castle'] | tokens=0 | response_length=602
+2026-03-18 01:41:20 | INFO | SESSION_START | New user session started
+2026-03-18 01:41:43 | INFO | QUERY | message='Please plan a full school excursion to Vilnius Old Town for Grade 1, 25 pupils and 2 teachers, trave' | sources=['Kaunas Old Town', 'Kernave', 'Vilnius Old Town', 'Trakai Castle'] | tokens=0 | response_length=2270
+2026-03-18 01:42:24 | INFO | QUERY | message='Kryžių kalnas' | sources=[] | tokens=0 | response_length=279
+2026-03-18 01:43:27 | INFO | QUERY | message='autobusas' | sources=[] | tokens=0 | response_length=764

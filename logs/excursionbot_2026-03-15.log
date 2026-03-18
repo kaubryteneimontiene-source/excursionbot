@@ -1,0 +1,14 @@
+2026-03-15 00:09:48 | INFO | SESSION_START | New user session started
+2026-03-15 00:09:48 | INFO | SESSION_START | New user session started
+2026-03-15 00:10:06 | INFO | QUERY | message='hello, i would like excursion to plan' | sources=['Curonian Spit', 'Kernave', 'Vilnius Old Town', 'Kaunas Old Town'] | tokens=0 | response_length=230
+2026-03-15 00:10:06 | INFO | QUERY | message='hello, i would like excursion to plan' | sources=['Curonian Spit', 'Kernave', 'Vilnius Old Town', 'Kaunas Old Town'] | tokens=0 | response_length=230
+2026-03-15 00:11:25 | INFO | QUERY | message='1. 12 years
+2. 10
+3. Kaunas' | sources=['Kaunas Old Town'] | tokens=0 | response_length=827
+2026-03-15 00:11:25 | INFO | QUERY | message='1. 12 years
+2. 10
+3. Kaunas' | sources=['Kaunas Old Town'] | tokens=0 | response_length=827
+2026-03-15 00:14:41 | INFO | SESSION_START | New user session started
+2026-03-15 00:14:41 | INFO | SESSION_START | New user session started
+2026-03-15 00:14:51 | INFO | QUERY | message='good afternoon' | sources=[] | tokens=0 | response_length=79
+2026-03-15 00:14:51 | INFO | QUERY | message='good afternoon' | sources=[] | tokens=0 | response_length=79
