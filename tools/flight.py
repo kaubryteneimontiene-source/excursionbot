@@ -128,6 +128,21 @@ def build_itinerary(site: str, age_group: str, duration_hours: int) -> str:
     if age not in ["7-10", "11-14", "15-19"]:
         age = "11-14"
 
+    # Lithuanian to English site name mapping
+    lt_to_en = {
+        "trakų pilis": "trakai castle",
+        "vilniaus senamiestis": "vilnius old town",
+        "kryžių kalnas": "hill of crosses",
+        "kuršių nerija": "curonian spit",
+        "kauno senamiestis": "kaunas old town",
+        "kernavė": "kernave",
+        "okupacijų muziejus": "museum of occupations",
+        "palangos gintaro muziejus": "palanga amber museum",
+    }
+
+    if site_lower in lt_to_en:
+        site_lower = lt_to_en[site_lower]
+
     matched_site = None
     for key in SITE_ITINERARIES:
         if key in site_lower or site_lower in key:

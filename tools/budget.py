@@ -142,6 +142,22 @@ def calculate_group_budget(
     total_people = pupils + teachers
 
     # Match site
+    # Lithuanian to English site name mapping
+    lt_to_en = {
+        "trakų pilis": "trakai castle",
+        "vilniaus senamiestis": "vilnius old town",
+        "kryžių kalnas": "hill of crosses",
+        "kuršių nerija": "curonian spit",
+        "kauno senamiestis": "kaunas old town",
+        "kernavė": "kernave",
+        "okupacijų muziejus": "museum of occupations",
+        "palangos gintaro muziejus": "palanga amber museum",
+    }
+
+    # Translate Lithuanian name if needed
+    if site_lower in lt_to_en:
+        site_lower = lt_to_en[site_lower]
+
     matched_site = None
     for key in ENTRY_FEES:
         if key in site_lower or site_lower in key:
