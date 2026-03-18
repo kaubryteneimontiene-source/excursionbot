@@ -1,3 +1,4 @@
+from langchain_community.callbacks import get_openai_callback
 from cache import get_cached_response, save_cached_response
 import os
 from logger import log_query, log_error, log_session_start
@@ -135,7 +136,10 @@ def chat(user_message: str, chat_history: list, language: str = "English") -> tu
     messages.append(HumanMessage(content=full_message))
 
     try:
-        result = agent_executor.invoke({"messages": messages})
+        with get_openai_callback() as cb:
+            result = agent_executor.invoke({"messages": messages})
+            prompt_tokens = cb.prompt_tokens
+            completion_tokens = cb.completion_tokens
 
         # Extract tool calls that were made
         tools_used = []
@@ -156,7 +160,7 @@ def chat(user_message: str, chat_history: list, language: str = "English") -> tu
                 user_message, response, sources, tools_used, chunks
             )
 
-        return response, 0, 0, sources, tools_used, chunks
+        return response, prompt_tokens, completion_tokens, sources, tools_used, chunks
 
     except Exception as e:
         error_msg = (
