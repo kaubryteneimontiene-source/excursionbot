@@ -6,14 +6,24 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langgraph.prebuilt import create_react_agent
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
 from rag.retriever import get_retriever
 from tools.budget import calculate_group_budget
 from tools.weather import suggest_activities
 from tools.flight import build_itinerary
+from tools.wikipedia_tool import search_site_wikipedia
 from prompts import get_system_prompt
 
 load_dotenv()
+
+# ---- LANGSMITH TRACING ----
+# Add to your .env:
+# LANGCHAIN_TRACING_V2=true
+# LANGCHAIN_API_KEY=your_langsmith_key
+# LANGCHAIN_PROJECT=ExcursionBot
+os.environ.setdefault("LANGCHAIN_TRACING_V2", os.getenv("LANGCHAIN_TRACING_V2", "false"))
+os.environ.setdefault("LANGCHAIN_PROJECT", os.getenv("LANGCHAIN_PROJECT", "ExcursionBot"))
 
 
 def create_agent():
@@ -24,7 +34,12 @@ def create_agent():
         api_key=os.getenv("OPENAI_API_KEY")
     )
 
-    tools = [calculate_group_budget, suggest_activities, build_itinerary]
+    tools = [
+        calculate_group_budget,
+        suggest_activities,
+        build_itinerary,
+        search_site_wikipedia,
+    ]
 
     agent = create_react_agent(
         model=llm,
@@ -68,12 +83,25 @@ def initialize():
     agent_executor = create_agent()
     log_session_start()
     print("ExcursionBot ready!")
-    
+
+
 def reload_retriever_after_upload():
     """Reload retriever after new document uploaded."""
     global retriever
     retriever = get_retriever()
     print("Retriever reloaded after upload!")
+
+
+@retry(
+    stop=stop_after_attempt(3),
+    wait=wait_exponential(multiplier=1, min=2, max=10),
+    retry=retry_if_exception_type(Exception),
+    reraise=True
+)
+def _invoke_agent_with_retry(agent_exec, messages: list) -> dict:
+    """Invoke agent with automatic retry on failure (max 3 attempts)."""
+    return agent_exec.invoke({"messages": messages})
+
 
 def chat(user_message: str, chat_history: list, language: str = "English") -> tuple[str, int, int, list, list, list]:
     """
@@ -86,7 +114,6 @@ def chat(user_message: str, chat_history: list, language: str = "English") -> tu
     if not retriever or not agent_executor:
         initialize()
 
-    # Detect conversational messages that don't need RAG context
     conversational_phrases = [
         "yes", "no", "ok", "okay", "thanks", "thank you", "hello",
         "hi", "hey", "bye", "goodbye", "great", "cool", "awesome",
@@ -100,7 +127,6 @@ def chat(user_message: str, chat_history: list, language: str = "English") -> tu
         or len(user_message.strip()) < 15
     )
 
-    # Check cache first (only for non-conversational messages)
     if not is_conversational:
         cached = get_cached_response(user_message)
         if cached:
@@ -137,11 +163,10 @@ def chat(user_message: str, chat_history: list, language: str = "English") -> tu
 
     try:
         with get_openai_callback() as cb:
-            result = agent_executor.invoke({"messages": messages})
+            result = _invoke_agent_with_retry(agent_executor, messages)
             prompt_tokens = cb.prompt_tokens
             completion_tokens = cb.completion_tokens
 
-        # Extract tool calls that were made
         tools_used = []
         for message in result["messages"]:
             if hasattr(message, "tool_calls") and message.tool_calls:
@@ -154,7 +179,6 @@ def chat(user_message: str, chat_history: list, language: str = "English") -> tu
         response = result["messages"][-1].content
         log_query(user_message, response, sources, 0)
 
-        # Save to cache
         if not is_conversational:
             save_cached_response(
                 user_message, response, sources, tools_used, chunks
@@ -164,7 +188,7 @@ def chat(user_message: str, chat_history: list, language: str = "English") -> tu
 
     except Exception as e:
         error_msg = (
-            "⚠️ Sorry, I ran into an issue. "
+            "⚠️ Sorry, I ran into an issue after 3 attempts. "
             "Please try again or rephrase your question."
         )
         log_error(str(e), context=user_message)

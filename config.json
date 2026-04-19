@@ -1,0 +1,113 @@
+{
+  "transport": {
+    "bus_cost_per_km": 1.20,
+    "food_per_person": 8.0,
+    "currency": "EUR"
+  },
+  "entry_fees": {
+    "vilnius old town": {
+      "price": 5,
+      "note": "Gediminas Tower entry. Cathedral free.",
+      "website": "www.lnm.lt"
+    },
+    "trakai castle": {
+      "price": 7,
+      "note": "Island Castle and museum entry.",
+      "website": "www.trakaimuziejus.lt"
+    },
+    "hill of crosses": {
+      "price": 0,
+      "note": "Free entry. Donations welcome.",
+      "website": "www.kryziukalnas.lt"
+    },
+    "curonian spit": {
+      "price": 4,
+      "note": "National Park entrance fee.",
+      "website": "www.nerija.lt"
+    },
+    "kaunas old town": {
+      "price": 6,
+      "note": "War Museum entry. Castle and streets free.",
+      "website": "www.kaunas.lt"
+    },
+    "kernave": {
+      "price": 4,
+      "note": "Archaeological museum entry.",
+      "website": "www.kernave.org"
+    },
+    "museum of occupations": {
+      "price": 4,
+      "note": "Full museum including KGB cells.",
+      "website": "www.genocid.lt"
+    },
+    "palanga amber museum": {
+      "price": 5,
+      "note": "Palace museum and gardens.",
+      "website": "www.pgm.lt"
+    },
+    "riga old town": {
+      "price": 0,
+      "note": "Old town free to explore. Museum entries vary.",
+      "website": "www.latvia.travel"
+    },
+    "rundale palace": {
+      "price": 8,
+      "note": "Palace and gardens entry.",
+      "website": "www.rundale.net"
+    },
+    "sigulda castle": {
+      "price": 3,
+      "note": "Castle ruins and park entry.",
+      "website": "www.sigulda.lv"
+    },
+    "cesis castle": {
+      "price": 6,
+      "note": "Medieval castle and museum entry.",
+      "website": "www.cesupils.lv"
+    },
+    "jurmala": {
+      "price": 0,
+      "note": "Beach and open-air museum free. Kemeri Park free.",
+      "website": "www.jurmala.lv"
+    },
+    "tallinn old town": {
+      "price": 0,
+      "note": "Old town free to explore. Tower entries ~€5.",
+      "website": "www.visittallinn.ee"
+    },
+    "tartu": {
+      "price": 5,
+      "note": "Estonian National Museum entry.",
+      "website": "www.erm.ee"
+    },
+    "parnu": {
+      "price": 0,
+      "note": "Beach and old town free. Museum entries vary.",
+      "website": "www.visitparnu.com"
+    },
+    "haapsalu castle": {
+      "price": 5,
+      "note": "Episcopal Castle and museum entry.",
+      "website": "www.haapsalulinnus.ee"
+    }
+  },
+  "site_coordinates": {
+    "vilnius old town": [25.2797, 54.6872],
+    "trakai castle": [24.9340, 54.6379],
+    "hill of crosses": [23.4167, 56.0153],
+    "curonian spit": [21.0667, 55.3000],
+    "kaunas old town": [23.9036, 54.8985],
+    "kernave": [24.8333, 54.8833],
+    "museum of occupations": [25.2686, 54.6896],
+    "palanga amber museum": [21.0678, 55.9196],
+    "riga old town": [24.1052, 56.9496],
+    "rundale palace": [24.0167, 56.4167],
+    "sigulda castle": [24.8550, 57.1550],
+    "cesis castle": [25.2728, 57.3122],
+    "jurmala": [23.7711, 56.9680],
+    "tallinn old town": [24.7453, 59.4370],
+    "tartu": [26.7290, 58.3776],
+    "parnu": [24.5020, 58.3859],
+    "haapsalu castle": [23.5421, 58.9430]
+  }
+}

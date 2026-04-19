@@ -138,6 +138,14 @@ def build_itinerary(site: str, age_group: str, duration_hours: int) -> str:
         "kernavė": "kernave",
         "okupacijų muziejus": "museum of occupations",
         "palangos gintaro muziejus": "palanga amber museum",
+        "rygos senamiestis": "riga old town",
+        "rundālės pils": "rundale palace",
+        "siguldos pilis": "sigulda castle",
+        "cėsio pilis": "cesis castle",
+        "jūrmala": "jurmala",
+        "talino senamiestis": "tallinn old town",
+        "pärnu": "parnu",
+        "haapsalu pilis": "haapsalu castle",
     }
 
     if site_lower in lt_to_en:
@@ -166,8 +174,22 @@ def build_itinerary(site: str, age_group: str, duration_hours: int) -> str:
         f"{'=' * 40}\n"
     )
 
-    for time, activity in schedule:
-        result += f"{time}  {activity}\n"
+    # Trim schedule to fit duration_hours
+    # Each step is ~45-60 min on average; parse start times to cut off realistically
+    trimmed_schedule = schedule
+    if duration_hours <= 4 and len(schedule) > 5:
+        trimmed_schedule = schedule[:5]
+        # Replace last entry with departure
+        trimmed_schedule = list(trimmed_schedule[:-1]) + [(trimmed_schedule[-1][0], "Depart")]
+    elif duration_hours <= 6 and len(schedule) > 7:
+        trimmed_schedule = schedule[:7]
+        trimmed_schedule = list(trimmed_schedule[:-1]) + [(trimmed_schedule[-1][0], "Depart")]
+
+    for time_slot, activity in trimmed_schedule:
+        result += f"{time_slot}  {activity}\n"
+
+    if duration_hours <= 4 and len(schedule) > 5:
+        result += f"\n💡 Half-day note: Schedule shortened to fit {duration_hours}h. Some activities omitted.\n"
 
     result += (
         f"{'=' * 40}\n"
